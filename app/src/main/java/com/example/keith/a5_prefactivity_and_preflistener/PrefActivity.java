@@ -17,7 +17,7 @@ public class PrefActivity extends AppCompatActivity {
         PrefFragment prefFragment = new PrefFragment();
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(android.R.id.content, prefFragment);
+        fragmentTransaction.replace(android.R.id.content, prefFragment);        //android.R.id.content gets root element of the view
         fragmentTransaction.commit();
     }
 
