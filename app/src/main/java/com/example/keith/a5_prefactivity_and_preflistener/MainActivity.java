@@ -35,10 +35,19 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-                    Toast.makeText(MainActivity.this, "Key=" + key, Toast.LENGTH_SHORT).show();
-                    if (key.equals("PREF_LIST")) {
-                        String myString = myPreference.getString("PREF_LIST", "Nothing Found");
-                        Toast.makeText(MainActivity.this, "From Listener PREF_LIST=" + myString, Toast.LENGTH_SHORT).show();
+
+                    switch(key){
+                        case "PREF_CHECKBOX":
+                            Toast.makeText(MainActivity.this, "Handling pref_checkbox", Toast.LENGTH_SHORT).show();
+                            //manage this case
+                            break;
+                        case "switch_preference_1":
+                            Toast.makeText(MainActivity.this, "Handling switch_preference_1", Toast.LENGTH_SHORT).show();
+                            //manage this case
+                            break;
+                        default:
+                            Toast.makeText(MainActivity.this, "Yikes, handle this unknown key", Toast.LENGTH_SHORT).show();
+
                     }
                 }
             };
